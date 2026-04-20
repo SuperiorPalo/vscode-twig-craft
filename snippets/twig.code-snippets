@@ -1,0 +1,225 @@
+{
+  "Twig: block": {
+    "prefix": "block",
+    "body": [
+      "{% block ${1:name} %}",
+      "\t$0",
+      "{% endblock %}"
+    ],
+    "description": "Twig {% block %} ... {% endblock %}"
+  },
+  "Twig: block (inline)": {
+    "prefix": "blocki",
+    "body": "{% block ${1:name} \"${2:value}\" %}",
+    "description": "Twig single-line block with default value"
+  },
+  "Twig: extends": {
+    "prefix": "extends",
+    "body": "{% extends \"${1:template.twig}\" %}",
+    "description": "Twig template inheritance"
+  },
+  "Twig: include": {
+    "prefix": "include",
+    "body": "{% include \"${1:template.twig}\" %}",
+    "description": "Twig include another template"
+  },
+  "Twig: include with": {
+    "prefix": "includewith",
+    "body": "{% include \"${1:template.twig}\" with { ${2:key}: ${3:value} } %}",
+    "description": "Twig include with context"
+  },
+  "Twig: include only": {
+    "prefix": "includeonly",
+    "body": "{% include \"${1:template.twig}\" with { ${2:key}: ${3:value} } only %}",
+    "description": "Twig include with isolated context"
+  },
+  "Twig: embed": {
+    "prefix": "embed",
+    "body": [
+      "{% embed \"${1:template.twig}\" %}",
+      "\t$0",
+      "{% endembed %}"
+    ],
+    "description": "Twig embed (extends-style include with overridable blocks)"
+  },
+  "Twig: import": {
+    "prefix": "import",
+    "body": "{% import \"${1:_macros.twig}\" as ${2:macros} %}",
+    "description": "Twig import macros"
+  },
+  "Twig: from import": {
+    "prefix": "fromimport",
+    "body": "{% from \"${1:_macros.twig}\" import ${2:name} %}",
+    "description": "Twig import specific macro"
+  },
+  "Twig: macro": {
+    "prefix": "macro",
+    "body": [
+      "{% macro ${1:name}(${2:args}) %}",
+      "\t$0",
+      "{% endmacro %}"
+    ],
+    "description": "Twig macro definition"
+  },
+  "Twig: if": {
+    "prefix": "if",
+    "body": [
+      "{% if ${1:condition} %}",
+      "\t$0",
+      "{% endif %}"
+    ],
+    "description": "Twig {% if %}"
+  },
+  "Twig: if/else": {
+    "prefix": "ifelse",
+    "body": [
+      "{% if ${1:condition} %}",
+      "\t${2}",
+      "{% else %}",
+      "\t${3}",
+      "{% endif %}"
+    ],
+    "description": "Twig {% if %}/{% else %}"
+  },
+  "Twig: if/elseif/else": {
+    "prefix": "ifelseif",
+    "body": [
+      "{% if ${1:condition} %}",
+      "\t${2}",
+      "{% elseif ${3:condition} %}",
+      "\t${4}",
+      "{% else %}",
+      "\t${5}",
+      "{% endif %}"
+    ],
+    "description": "Twig multi-branch conditional"
+  },
+  "Twig: for": {
+    "prefix": "for",
+    "body": [
+      "{% for ${1:item} in ${2:collection} %}",
+      "\t$0",
+      "{% endfor %}"
+    ],
+    "description": "Twig {% for %} loop"
+  },
+  "Twig: for/else": {
+    "prefix": "forelse",
+    "body": [
+      "{% for ${1:item} in ${2:collection} %}",
+      "\t${3}",
+      "{% else %}",
+      "\t${4:no items}",
+      "{% endfor %}"
+    ],
+    "description": "Twig {% for %} with empty fallback"
+  },
+  "Twig: for key, value": {
+    "prefix": "forkv",
+    "body": [
+      "{% for ${1:key}, ${2:value} in ${3:collection} %}",
+      "\t$0",
+      "{% endfor %}"
+    ],
+    "description": "Twig {% for %} iterating key/value pairs"
+  },
+  "Twig: set": {
+    "prefix": "set",
+    "body": "{% set ${1:name} = ${2:value} %}",
+    "description": "Twig variable assignment"
+  },
+  "Twig: set block": {
+    "prefix": "setblock",
+    "body": [
+      "{% set ${1:name} %}",
+      "\t$0",
+      "{% endset %}"
+    ],
+    "description": "Twig captured block assignment"
+  },
+  "Twig: apply filter": {
+    "prefix": "apply",
+    "body": [
+      "{% apply ${1:filter} %}",
+      "\t$0",
+      "{% endapply %}"
+    ],
+    "description": "Twig {% apply %} block (Twig 3 replacement for {% filter %})"
+  },
+  "Twig: autoescape": {
+    "prefix": "autoescape",
+    "body": [
+      "{% autoescape ${1:'html'} %}",
+      "\t$0",
+      "{% endautoescape %}"
+    ],
+    "description": "Twig autoescape strategy block"
+  },
+  "Twig: verbatim": {
+    "prefix": "verbatim",
+    "body": [
+      "{% verbatim %}",
+      "\t$0",
+      "{% endverbatim %}"
+    ],
+    "description": "Twig verbatim (no parsing inside)"
+  },
+  "Twig: with": {
+    "prefix": "with",
+    "body": [
+      "{% with { ${1:key}: ${2:value} } %}",
+      "\t$0",
+      "{% endwith %}"
+    ],
+    "description": "Twig {% with %} scoped variables"
+  },
+  "Twig: do": {
+    "prefix": "do",
+    "body": "{% do ${1:expression} %}",
+    "description": "Twig {% do %} discard expression result"
+  },
+  "Twig: print expression": {
+    "prefix": "print",
+    "body": "{{ ${1:expression} }}",
+    "description": "Twig print {{ ... }}"
+  },
+  "Twig: print escaped": {
+    "prefix": "printesc",
+    "body": "{{ ${1:expression}|e }}",
+    "description": "Twig print with explicit HTML escape"
+  },
+  "Twig: print raw": {
+    "prefix": "printraw",
+    "body": "{{ ${1:expression}|raw }}",
+    "description": "Twig print without escaping (use carefully)"
+  },
+  "Twig: comment": {
+    "prefix": "comment",
+    "body": "{# ${1:comment} #}",
+    "description": "Twig {# comment #}"
+  },
+  "Twig: comment block": {
+    "prefix": "commentblock",
+    "body": [
+      "{#",
+      "\t$0",
+      "#}"
+    ],
+    "description": "Twig multi-line comment block"
+  },
+  "Twig: ternary": {
+    "prefix": "ternary",
+    "body": "{{ ${1:condition} ? ${2:if_true} : ${3:if_false} }}",
+    "description": "Twig ternary inside print"
+  },
+  "Twig: null coalesce": {
+    "prefix": "coalesce",
+    "body": "{{ ${1:value} ?? ${2:fallback} }}",
+    "description": "Twig null coalescing"
+  },
+  "Twig: dump": {
+    "prefix": "dump",
+    "body": "{{ dump(${1:variable}) }}",
+    "description": "Twig debug dump (requires Twig debug extension)"
+  }
+}

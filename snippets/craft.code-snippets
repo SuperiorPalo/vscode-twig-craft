@@ -1,0 +1,183 @@
+{
+  "Craft: entries query": {
+    "prefix": "craftentries",
+    "body": [
+      "{% set ${1:entries} = craft.entries",
+      "\t.section('${2:section}')",
+      "\t.limit(${3:10})",
+      "\t.all() %}"
+    ],
+    "description": "Craft entries query (set + .all)"
+  },
+  "Craft: entries one": {
+    "prefix": "craftentry",
+    "body": "{% set ${1:entry} = craft.entries.section('${2:section}').slug('${3:slug}').one() %}",
+    "description": "Craft single entry by slug"
+  },
+  "Craft: assets query": {
+    "prefix": "craftassets",
+    "body": [
+      "{% set ${1:assets} = craft.assets",
+      "\t.volume('${2:volume}')",
+      "\t.limit(${3:10})",
+      "\t.all() %}"
+    ],
+    "description": "Craft assets query"
+  },
+  "Craft: categories query": {
+    "prefix": "craftcategories",
+    "body": [
+      "{% set ${1:categories} = craft.categories",
+      "\t.group('${2:group}')",
+      "\t.all() %}"
+    ],
+    "description": "Craft categories query"
+  },
+  "Craft: tags query": {
+    "prefix": "crafttags",
+    "body": [
+      "{% set ${1:tags} = craft.tags",
+      "\t.group('${2:group}')",
+      "\t.all() %}"
+    ],
+    "description": "Craft tags query"
+  },
+  "Craft: users query": {
+    "prefix": "craftusers",
+    "body": [
+      "{% set ${1:users} = craft.users",
+      "\t.group('${2:group}')",
+      "\t.all() %}"
+    ],
+    "description": "Craft users query"
+  },
+  "Craft: globals": {
+    "prefix": "craftglobal",
+    "body": "{{ ${1:globalSetHandle}.${2:fieldHandle} }}",
+    "description": "Craft global set field"
+  },
+  "Craft: currentUser": {
+    "prefix": "craftcurrentuser",
+    "body": [
+      "{% if currentUser %}",
+      "\t$0",
+      "{% endif %}"
+    ],
+    "description": "Craft currentUser check"
+  },
+  "Craft: cache": {
+    "prefix": "cache",
+    "body": [
+      "{% cache for ${1:1 hour} %}",
+      "\t$0",
+      "{% endcache %}"
+    ],
+    "description": "Craft {% cache %} block"
+  },
+  "Craft: cache globally": {
+    "prefix": "cacheglobal",
+    "body": [
+      "{% cache globally for ${1:1 day} %}",
+      "\t$0",
+      "{% endcache %}"
+    ],
+    "description": "Craft cache shared across requests"
+  },
+  "Craft: nav": {
+    "prefix": "nav",
+    "body": [
+      "{% nav ${1:entry} in ${2:entries} %}",
+      "\t<li>",
+      "\t\t<a href=\"{{ ${1:entry}.url }}\">{{ ${1:entry}.title }}</a>",
+      "\t\t{% ifchildren %}",
+      "\t\t\t<ul>",
+      "\t\t\t\t{% children %}",
+      "\t\t\t</ul>",
+      "\t\t{% endifchildren %}",
+      "\t</li>",
+      "{% endnav %}"
+    ],
+    "description": "Craft nested navigation block"
+  },
+  "Craft: switch": {
+    "prefix": "switch",
+    "body": [
+      "{% switch ${1:value} %}",
+      "\t{% case ${2:option1} %}",
+      "\t\t${3}",
+      "\t{% case ${4:option2} %}",
+      "\t\t${5}",
+      "\t{% default %}",
+      "\t\t${6}",
+      "{% endswitch %}"
+    ],
+    "description": "Craft switch/case/default"
+  },
+  "Craft: paginate": {
+    "prefix": "paginate",
+    "body": [
+      "{% paginate craft.entries.section('${1:section}').limit(${2:10}) as ${3:pageInfo}, ${4:entries} %}",
+      "",
+      "{% for ${5:entry} in ${4:entries} %}",
+      "\t$0",
+      "{% endfor %}",
+      "",
+      "{% if ${3:pageInfo}.prevUrl %}<a href=\"{{ ${3:pageInfo}.prevUrl }}\">Previous</a>{% endif %}",
+      "{% if ${3:pageInfo}.nextUrl %}<a href=\"{{ ${3:pageInfo}.nextUrl }}\">Next</a>{% endif %}"
+    ],
+    "description": "Craft paginated query with prev/next links"
+  },
+  "Craft: hook": {
+    "prefix": "hook",
+    "body": "{% hook '${1:hookName}' %}",
+    "description": "Craft template hook"
+  },
+  "Craft: js block": {
+    "prefix": "js",
+    "body": [
+      "{% js %}",
+      "\t$0",
+      "{% endjs %}"
+    ],
+    "description": "Craft inline JS block (registered via view)"
+  },
+  "Craft: css block": {
+    "prefix": "css",
+    "body": [
+      "{% css %}",
+      "\t$0",
+      "{% endcss %}"
+    ],
+    "description": "Craft inline CSS block (registered via view)"
+  },
+  "Craft: header": {
+    "prefix": "header",
+    "body": "{% header \"${1:Header-Name}: ${2:value}\" %}",
+    "description": "Craft set HTTP response header"
+  },
+  "Craft: redirect": {
+    "prefix": "redirect",
+    "body": "{% redirect \"${1:url}\" ${2:302} %}",
+    "description": "Craft redirect with optional status code"
+  },
+  "Craft: requireLogin": {
+    "prefix": "requirelogin",
+    "body": "{% requireLogin %}",
+    "description": "Craft require authenticated user"
+  },
+  "Craft: requirePermission": {
+    "prefix": "requirepermission",
+    "body": "{% requirePermission \"${1:permissionHandle}\" %}",
+    "description": "Craft require user permission"
+  },
+  "Craft: requireGuest": {
+    "prefix": "requireguest",
+    "body": "{% requireGuest %}",
+    "description": "Craft require unauthenticated user"
+  },
+  "Craft: exit": {
+    "prefix": "exit",
+    "body": "{% exit ${1:404} %}",
+    "description": "Craft exit with HTTP status code"
+  }
+}

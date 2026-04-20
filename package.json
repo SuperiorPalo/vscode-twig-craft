@@ -44,6 +44,16 @@
         "path": "./syntaxes/twig-injection.tmLanguage.json",
         "injectTo": ["text.html.basic"]
       }
+    ],
+    "snippets": [
+      {
+        "language": "twig",
+        "path": "./snippets/twig.code-snippets"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/craft.code-snippets"
+      }
     ]
   },
   "repository": {
