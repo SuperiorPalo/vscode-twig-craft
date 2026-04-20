@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(mkdir:*)",
+      "Bash(unzip:*)",
+      "Bash(vsce:*)"
+    ],
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(gh repo delete*)",
+      "Bash(rm -rf /*)"
+    ]
+  }
+}

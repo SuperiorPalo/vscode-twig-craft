@@ -1,0 +1,39 @@
+{
+  "name": "twig-craft",
+  "displayName": "Twig + Craft CMS",
+  "description": "Syntax, snippets, formatting and hover docs for Twig and Craft CMS templates",
+  "version": "0.0.1",
+  "publisher": "PLACEHOLDER",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onLanguage:twig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuperiorPalo/vscode-twig-craft.git"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "node esbuild.js --production",
+    "watch": "node esbuild.js --watch",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.9.1",
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.3"
+  }
+}
