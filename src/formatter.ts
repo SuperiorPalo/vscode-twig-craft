@@ -24,6 +24,7 @@ export class TwigFormatter implements vscode.DocumentFormattingEditProvider {
       const plugin = await getTwigPlugin();
       const userConfig = (await prettier.resolveConfig(filepath)) ?? {};
       const formatted = await prettier.format(text, {
+        printWidth: 120,
         ...userConfig,
         parser: 'twig',
         plugins: [plugin],
