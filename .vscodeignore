@@ -3,7 +3,6 @@
 .claude/**
 src/**
 out/**
-node_modules/**
 .gitignore
 .gitattributes
 .editorconfig
@@ -12,3 +11,11 @@ esbuild.js
 **/*.ts
 !dist/**
 dist/**/*.map
+node_modules/**/*.ts
+node_modules/**/*.map
+node_modules/**/test/**
+node_modules/**/tests/**
+node_modules/**/.bin/**
+node_modules/**/CHANGELOG*
+node_modules/**/*.md
+!node_modules/**/LICENSE*

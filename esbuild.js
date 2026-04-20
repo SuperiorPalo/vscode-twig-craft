@@ -10,7 +10,7 @@ const options = {
   platform: 'node',
   format: 'cjs',
   target: 'node18',
-  external: ['vscode'],
+  external: ['vscode', 'prettier', '@zackad/prettier-plugin-twig'],
   minify: production,
   sourcemap: !production,
   logLevel: 'info',

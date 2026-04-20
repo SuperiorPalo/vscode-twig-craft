@@ -21,8 +21,14 @@
     "languages": [
       {
         "id": "twig",
-        "aliases": ["Twig", "twig"],
-        "extensions": [".twig", ".html.twig"],
+        "aliases": [
+          "Twig",
+          "twig"
+        ],
+        "extensions": [
+          ".twig",
+          ".html.twig"
+        ],
         "firstLine": "^\\{[#%]",
         "configuration": "./language-configuration.json"
       }
@@ -42,7 +48,9 @@
       {
         "scopeName": "text.html.twig.injection",
         "path": "./syntaxes/twig-injection.tmLanguage.json",
-        "injectTo": ["text.html.basic"]
+        "injectTo": [
+          "text.html.basic"
+        ]
       }
     ],
     "snippets": [
@@ -79,5 +87,9 @@
     "@vscode/vsce": "^3.9.1",
     "esbuild": "^0.28.0",
     "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@zackad/prettier-plugin-twig": "^0.17.0",
+    "prettier": "^3.8.3"
   }
 }
