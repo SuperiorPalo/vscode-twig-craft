@@ -13,6 +13,30 @@
     "Snippets",
     "Formatters"
   ],
+  "keywords": [
+    "twig",
+    "craft",
+    "craftcms",
+    "symfony",
+    "template",
+    "syntax",
+    "highlighting",
+    "snippets",
+    "formatter",
+    "prettier",
+    "emmet",
+    "hover"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1f2937",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/SuperiorPalo/vscode-twig-craft#readme",
+  "bugs": {
+    "url": "https://github.com/SuperiorPalo/vscode-twig-craft/issues"
+  },
+  "qna": "marketplace",
   "main": "./dist/extension.js",
   "activationEvents": [
     "onLanguage:twig"

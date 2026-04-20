@@ -8,6 +8,7 @@ out/**
 .editorconfig
 tsconfig.json
 esbuild.js
+images/icon.svg
 **/*.ts
 !dist/**
 dist/**/*.map
