@@ -54,7 +54,12 @@
         "language": "twig",
         "path": "./snippets/craft.code-snippets"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "emmet.includeLanguages": {
+        "twig": "html"
+      }
+    }
   },
   "repository": {
     "type": "git",
