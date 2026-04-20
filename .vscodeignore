@@ -1,6 +1,7 @@
 .vscode/**
 .vscode-test/**
 .claude/**
+.github/**
 src/**
 out/**
 .gitignore
@@ -9,6 +10,7 @@ out/**
 tsconfig.json
 esbuild.js
 images/icon.svg
+PUBLISHING.md
 **/*.ts
 !dist/**
 dist/**/*.map
