@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { TwigFormatter } from './formatter';
+import { TwigHoverProvider } from './hover';
 
 export function activate(context: vscode.ExtensionContext): void {
   console.log('[twig-craft] activated');
@@ -8,6 +9,7 @@ export function activate(context: vscode.ExtensionContext): void {
       'twig',
       new TwigFormatter(),
     ),
+    vscode.languages.registerHoverProvider('twig', new TwigHoverProvider()),
   );
 }
 
