@@ -26,6 +26,24 @@
         "firstLine": "^\\{[#%]",
         "configuration": "./language-configuration.json"
       }
+    ],
+    "grammars": [
+      {
+        "language": "twig",
+        "scopeName": "text.html.twig",
+        "path": "./syntaxes/twig.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.css": "css",
+          "source.css.embedded.twig": "css",
+          "source.js": "javascript",
+          "source.js.embedded.twig": "javascript"
+        }
+      },
+      {
+        "scopeName": "text.html.twig.injection",
+        "path": "./syntaxes/twig-injection.tmLanguage.json",
+        "injectTo": ["text.html.basic"]
+      }
     ]
   },
   "repository": {

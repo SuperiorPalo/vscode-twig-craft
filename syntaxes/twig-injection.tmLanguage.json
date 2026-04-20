@@ -1,0 +1,15 @@
+{
+  "scopeName": "text.html.twig.injection",
+  "injectionSelector": "L:text.html.basic - (meta.embedded | comment)",
+  "patterns": [
+    {
+      "include": "text.html.twig#twig-print-tag"
+    },
+    {
+      "include": "text.html.twig#twig-statement-tag"
+    },
+    {
+      "include": "text.html.twig#twig-comment-tag"
+    }
+  ]
+}
