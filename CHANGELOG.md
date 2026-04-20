@@ -6,11 +6,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
-## [0.0.1]
+## [0.1.0] - 2026-04-20
 
 ### Added
 
-- Initial release.
+- Initial public release on the Visual Studio Code Marketplace.
 - Syntax highlighting for Twig and CraftCMS templates (TextMate grammar with HTML/CSS/JS embedding).
 - Injection grammar so plain `.html` files containing Twig delimiters get highlighted too.
 - Document formatter using Prettier 3 with `@zackad/prettier-plugin-twig` (default `printWidth` 120, respects workspace `.prettierrc`).

@@ -22,7 +22,7 @@ Built because the existing Twig extensions either ship a broken Prettier integra
 From the Marketplace:
 
 ```
-ext install PLACEHOLDER.twig-craft
+ext install pavelMikulik.twig-craft
 ```
 
 Or search for **Twig + Craft CMS** in the Extensions sidebar.

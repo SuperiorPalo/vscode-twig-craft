@@ -2,8 +2,8 @@
   "name": "twig-craft",
   "displayName": "Twig + Craft CMS",
   "description": "Syntax, snippets, formatting and hover docs for Twig and Craft CMS templates",
-  "version": "0.0.1",
-  "publisher": "PLACEHOLDER",
+  "version": "0.1.0",
+  "publisher": "pavelMikulik",
   "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
