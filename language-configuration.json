@@ -1,0 +1,41 @@
+{
+  "comments": {
+    "blockComment": ["{#", "#}"]
+  },
+  "brackets": [
+    ["{%", "%}"],
+    ["{{", "}}"],
+    ["{#", "#}"],
+    ["<", ">"],
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    { "open": "{%", "close": " %}" },
+    { "open": "{{", "close": " }}" },
+    { "open": "{#", "close": " #}" },
+    { "open": "<", "close": ">" },
+    { "open": "{", "close": "}" },
+    { "open": "[", "close": "]" },
+    { "open": "(", "close": ")" },
+    { "open": "\"", "close": "\"" },
+    { "open": "'", "close": "'" }
+  ],
+  "surroundingPairs": [
+    ["{%", "%}"],
+    ["{{", "}}"],
+    ["<", ">"],
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  "folding": {
+    "markers": {
+      "start": "^\\s*\\{%-?\\s*(block|if|for|macro|embed|verbatim|with|apply|cache|nav|switch|js)\\b",
+      "end": "^\\s*\\{%-?\\s*end(block|if|for|macro|embed|verbatim|with|apply|cache|nav|switch|js)\\s*-?%\\}"
+    }
+  }
+}

@@ -17,6 +17,17 @@
   "activationEvents": [
     "onLanguage:twig"
   ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "twig",
+        "aliases": ["Twig", "twig"],
+        "extensions": [".twig", ".html.twig"],
+        "firstLine": "^\\{[#%]",
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/SuperiorPalo/vscode-twig-craft.git"
