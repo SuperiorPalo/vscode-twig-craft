@@ -19,10 +19,16 @@ Built because the existing Twig extensions either ship a broken Prettier integra
 
 ## Installation
 
-From the Marketplace:
+**VS Code** (from the Visual Studio Marketplace):
 
 ```
 ext install pavelMikulik.twig-craft
+```
+
+**Cursor, VSCodium, Gitpod, Theia** (from the Open VSX Registry):
+
+```
+cursor --install-extension pavelMikulik.twig-craft
 ```
 
 Or search for **Twig + Craft CMS** in the Extensions sidebar.

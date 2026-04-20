@@ -6,6 +6,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Added
+
+- Published to the Open VSX Registry so Cursor, VSCodium, Gitpod, and Theia users can install via `cursor --install-extension pavelMikulik.twig-craft`.
+- CI workflow now publishes to both the Visual Studio Marketplace and Open VSX on each tag.
+
 ## [0.1.1] - 2026-04-20
 
 ### Fixed

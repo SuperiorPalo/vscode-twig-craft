@@ -4,11 +4,10 @@ Internal docs for releasing new versions of **Twig + Craft CMS** to the Visual S
 
 ## First-time setup (done)
 
-1. Azure DevOps organization created.
-2. Personal Access Token (PAT) generated with scope **Marketplace: Manage**.
-3. Publisher `pavelMikulik` registered at https://marketplace.visualstudio.com/manage.
-4. PAT stored in the OS keychain via `vsce login pavelMikulik`.
-5. GitHub repository secret `VSCE_PAT` added (for CI publishing).
+1. Azure DevOps organization created; PAT generated with scope **Marketplace: Manage**.
+2. Publisher `pavelMikulik` registered at https://marketplace.visualstudio.com/manage.
+3. PAT stored locally via `vsce login pavelMikulik`; also added to GitHub repo secret `VSCE_PAT`.
+4. Open VSX namespace `pavelMikulik` claimed at https://open-vsx.org; OVSX token stored in GitHub repo secret `OVSX_PAT`.
 
 ## Release checklist
 
@@ -53,10 +52,11 @@ git push --tags
 1. Installs deps
 2. Runs typecheck
 3. Runs `vsce package`
-4. Runs `vsce publish --pat $VSCE_PAT`
-5. Creates a GitHub Release with the `.vsix` attached and auto-generated notes
+4. Runs `vsce publish --pat $VSCE_PAT` (Visual Studio Marketplace)
+5. Runs `ovsx publish --pat $OVSX_PAT` (Open VSX Registry for Cursor/VSCodium/Theia)
+6. Creates a GitHub Release with the `.vsix` attached and auto-generated notes
 
-Within ~1 minute the new version appears on the Marketplace.
+Within ~1 minute the new version appears on both marketplaces.
 
 ## Manual publish (fallback)
 
